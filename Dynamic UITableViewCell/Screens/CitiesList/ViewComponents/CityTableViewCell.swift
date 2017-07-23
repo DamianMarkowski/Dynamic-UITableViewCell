@@ -15,6 +15,7 @@ protocol CityTableViewCellDelegate {
 class CityTableViewCell: UITableViewCell {
     
     @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var population: UILabel!
     @IBOutlet weak var cityDescription: UITextView!
     @IBOutlet weak var showHideButton: UIButton!
     var indexPath: IndexPath!
@@ -25,7 +26,7 @@ class CityTableViewCell: UITableViewCell {
     func configure(_ data: City) {
         self.data = data
         name.text = data.name
-        photo.image = UIImage(named: data.imageName)
+        population.text = "population: \(data.population)"
         cityDescription.text = data.shortDescription
         let titleForButton = GlobalConstants.ShowMoreButtonTitle
         showHideButton.setTitle(titleForButton, for: .normal)
