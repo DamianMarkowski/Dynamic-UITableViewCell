@@ -12,6 +12,5 @@ struct City {
     let name: String
     let shortDescription: String
     let fullDescription: String
-    let imageName: String
     let population: Int
 }

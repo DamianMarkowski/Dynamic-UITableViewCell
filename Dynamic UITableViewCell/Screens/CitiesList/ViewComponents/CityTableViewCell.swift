@@ -15,7 +15,6 @@ protocol CityTableViewCellDelegate {
 class CityTableViewCell: UITableViewCell {
     
     @IBOutlet weak var name: UILabel!
-    @IBOutlet weak var photo: UIImageView!
     @IBOutlet weak var cityDescription: UITextView!
     @IBOutlet weak var showHideButton: UIButton!
     var indexPath: IndexPath!

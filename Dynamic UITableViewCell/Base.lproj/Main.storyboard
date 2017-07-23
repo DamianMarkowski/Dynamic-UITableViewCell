@@ -5,7 +5,6 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13137.5"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -35,9 +34,6 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nzA-jt-1Ge">
-                                                    <rect key="frame" x="94" y="10" width="187.5" height="86.5"/>
-                                                </imageView>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ebf-rG-pRi">
                                                     <rect key="frame" x="8" y="20" width="359" height="79.5"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -59,22 +55,14 @@
                                                 <constraint firstItem="ebf-rG-pRi" firstAttribute="top" secondItem="J8Y-V8-iJ0" secondAttribute="bottom" constant="10" id="pUE-fQ-a4h"/>
                                                 <constraint firstAttribute="bottom" secondItem="7a9-lU-RXc" secondAttribute="bottom" id="u1Z-Y2-VXe"/>
                                             </constraints>
-                                            <variation key="default">
-                                                <mask key="subviews">
-                                                    <exclude reference="nzA-jt-1Ge"/>
-                                                </mask>
-                                            </variation>
                                         </tableViewCellContentView>
                                         <constraints>
                                             <constraint firstItem="J8Y-V8-iJ0" firstAttribute="centerX" secondItem="VN4-oW-2TK" secondAttribute="centerX" id="DD6-LV-LHV"/>
-                                            <constraint firstItem="nzA-jt-1Ge" firstAttribute="width" secondItem="VN4-oW-2TK" secondAttribute="width" multiplier="0.5" id="QRH-VF-fah"/>
                                             <constraint firstItem="7a9-lU-RXc" firstAttribute="centerX" secondItem="VN4-oW-2TK" secondAttribute="centerX" id="grb-wb-7EJ"/>
-                                            <constraint firstItem="nzA-jt-1Ge" firstAttribute="centerX" secondItem="VN4-oW-2TK" secondAttribute="centerX" id="kJH-Vp-4Z7"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="cityDescription" destination="ebf-rG-pRi" id="hn2-FU-PyE"/>
                                             <outlet property="name" destination="J8Y-V8-iJ0" id="b8w-hV-JQ6"/>
-                                            <outlet property="photo" destination="nzA-jt-1Ge" id="VI5-eC-TtX"/>
                                             <outlet property="showHideButton" destination="7a9-lU-RXc" id="9G1-wF-nxo"/>
                                         </connections>
                                     </tableViewCell>
