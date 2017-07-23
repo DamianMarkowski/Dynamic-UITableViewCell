@@ -1,6 +1,6 @@
 # Dynamic UITableViewCell
 
-Simple example how to create UITableView with dynamically adjusted cells according to their content. It was achieved with AutoLayout constraint-based layout system and Storyboard.
+Simple example how to create UITableView with dynamically adjusted cells according to their content. It was achieved with AutoLayout constraint-based layout system, Storyboard and configured rowHeight and estimatedRowHeight properties of UITableView object. The example uses a list of information about 3 cities in Andalucía, Spain. Description texts come from https://www.wikipedia.org/. 
 
 ## Getting started
 
