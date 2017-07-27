@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17282FBC1F2A3F02007C3399 /* CityTableViewSectionHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17282FBA1F2A3F02007C3399 /* CityTableViewSectionHeaderCell.swift */; };
+		17282FBD1F2A3F02007C3399 /* CityTableViewSectionHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17282FBB1F2A3F02007C3399 /* CityTableViewSectionHeaderCell.xib */; };
 		175BA6231F24EDD1002AC1E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175BA6221F24EDD1002AC1E6 /* AppDelegate.swift */; };
 		175BA6281F24EDD2002AC1E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 175BA6261F24EDD2002AC1E6 /* Main.storyboard */; };
 		175BA62A1F24EDD2002AC1E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 175BA6291F24EDD2002AC1E6 /* Assets.xcassets */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		17282FBA1F2A3F02007C3399 /* CityTableViewSectionHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityTableViewSectionHeaderCell.swift; sourceTree = "<group>"; };
+		17282FBB1F2A3F02007C3399 /* CityTableViewSectionHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CityTableViewSectionHeaderCell.xib; sourceTree = "<group>"; };
 		175BA61F1F24EDD1002AC1E6 /* Dynamic UITableViewCell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dynamic UITableViewCell.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		175BA6221F24EDD1002AC1E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		175BA6271F24EDD2002AC1E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -104,6 +108,8 @@
 			isa = PBXGroup;
 			children = (
 				17CACA7E1F24EF8800804D17 /* CityTableViewCell.swift */,
+				17282FBA1F2A3F02007C3399 /* CityTableViewSectionHeaderCell.swift */,
+				17282FBB1F2A3F02007C3399 /* CityTableViewSectionHeaderCell.xib */,
 			);
 			path = ViewComponents;
 			sourceTree = "<group>";
@@ -167,6 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				175BA62D1F24EDD2002AC1E6 /* LaunchScreen.storyboard in Resources */,
+				17282FBD1F2A3F02007C3399 /* CityTableViewSectionHeaderCell.xib in Resources */,
 				175BA62A1F24EDD2002AC1E6 /* Assets.xcassets in Resources */,
 				175BA6281F24EDD2002AC1E6 /* Main.storyboard in Resources */,
 			);
@@ -183,6 +190,7 @@
 				175BA6231F24EDD1002AC1E6 /* AppDelegate.swift in Sources */,
 				17CACA811F24F04E00804D17 /* City.swift in Sources */,
 				17CACA831F24F0C500804D17 /* CitiesFactory.swift in Sources */,
+				17282FBC1F2A3F02007C3399 /* CityTableViewSectionHeaderCell.swift in Sources */,
 				17B409DF1F251FDA007FD0F5 /* GlobalConstants.swift in Sources */,
 				17CACA7D1F24EF6D00804D17 /* CitiesListViewController.swift in Sources */,
 			);
