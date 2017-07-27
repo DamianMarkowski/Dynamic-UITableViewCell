@@ -10,6 +10,19 @@ import Foundation
 
 struct GlobalConstants {
     
-    static var ShowMoreButtonTitle = "Show more"
-    static var HideButtonTitle = "Hide"
+    static var SectionHeaderTitle = "Section header (tap to expand / hide)"
+    
+    struct ButtonsTitles {
+        static var ShowMoreButton = "Show more"
+        static var HideButton = "Hide"
+    }
+    
+    struct CellsIdentifiers {
+        static var SectionHeader = "SectionCell";
+        static var Regular = "RegularCell"
+    }
+    
+    struct NibNames {
+        static var SectionHeaderCell = "CityTableViewSectionHeaderCell"
+    }
 }

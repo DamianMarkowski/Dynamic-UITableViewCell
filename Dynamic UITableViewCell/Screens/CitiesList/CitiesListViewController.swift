@@ -13,6 +13,7 @@ class CitiesListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     var cities: [City] = []
     let estimatedRowHeight:CGFloat = 140.0
+    var sectionExpanded = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,10 +24,11 @@ class CitiesListViewController: UIViewController {
     fileprivate func configureTableView() {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = estimatedRowHeight
+        tableView.register(UINib(nibName: GlobalConstants.NibNames.SectionHeaderCell, bundle: nil), forCellReuseIdentifier: GlobalConstants.CellsIdentifiers.SectionHeader)
     }
     
     fileprivate func loadData(){
-        cities = CitiesFactory.createCitiesData()
+        cities = []
         tableView.reloadData()
     }
     
@@ -36,25 +38,42 @@ class CitiesListViewController: UIViewController {
 }
 
 extension CitiesListViewController: UITableViewDataSource, UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return cities.count
+        return cities.count + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell",
-                                                 for: indexPath) as! CityTableViewCell
-        let city = cities[indexPath.row]
-        cell.configure(city)
-        cell.delegate = self
-        cell.indexPath = indexPath
-        cell.selectionStyle = .none
-        return cell
+        if indexPath.row == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: GlobalConstants.CellsIdentifiers.SectionHeader) as! CityTableViewSectionHeaderCell
+            cell.titleLabel.text = GlobalConstants.SectionHeaderTitle
+            return cell
+        }else{
+            let cell = tableView.dequeueReusableCell(withIdentifier: GlobalConstants.CellsIdentifiers.Regular,
+                                                     for: indexPath) as! CityTableViewCell
+            let city = cities[indexPath.row - 1]
+            cell.configure(city)
+            cell.delegate = self
+            cell.indexPath = indexPath
+            cell.selectionStyle = .none
+            return cell
+        }
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            cities.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .automatic)
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 0 {
+            tableView.beginUpdates()
+            let indexPathsToUpdate = [IndexPath(item: 1, section: 0),IndexPath(item: 2, section: 0),IndexPath(item: 3, section: 0)]
+            if !sectionExpanded {
+                cities = CitiesFactory.createData()
+                tableView.insertRows(at: indexPathsToUpdate, with: .automatic)
+                sectionExpanded = true
+            }else{
+                cities = []
+                tableView.deleteRows(at: indexPathsToUpdate, with: .automatic)
+                sectionExpanded = false
+            }
+            tableView.endUpdates()
         }
     }
 }
@@ -64,6 +83,5 @@ extension CitiesListViewController: CityTableViewCellDelegate {
     func showHideButtonClicked(_ indexPath: IndexPath) {
         tableView.beginUpdates()
         tableView.endUpdates()
-        tableView.scrollToRow(at: indexPath, at: .top, animated: true)
     }
 }

@@ -10,7 +10,7 @@ import Foundation
 
 class CitiesFactory {
     
-    class func createCitiesData() -> [City] {
+    class func createData() -> [City] {
         var cities: [City] = []
         
         let malaga = City(name: "Málaga", shortDescription: "Málaga es una ciudad y un municipio de España, capital de la provincia homónima y ubicada en la comunidad autónoma de Andalucía. Con una población de 569 009 habitantes en 2016,Málaga es la sexta ciudad más poblada de España, la segunda de Andalucía y la número cuarenta y seis de la Unión Europea, así como la mayor de entre las que no son capitales autonómicas.", fullDescription: "Málaga es una ciudad y un municipio de España, capital de la provincia homónima y ubicada en la comunidad autónoma de Andalucía. Con una población de 569 009 habitantes en 2016,Málaga es la sexta ciudad más poblada de España, la segunda de Andalucía y la número cuarenta y seis de la Unión Europea, así como la mayor de entre las que no son capitales autonómicas. Además, es la zona urbana más densamente poblada de la conurbación formada por el conjunto de localidades que se sitúan a lo largo de 160 km de la Costa del Sol y el centro de un área metropolitana, que sobrepasa sus límites municipales, abarcando otros 12 municipios que suman 987 813 habitantes censados. Se estima, no obstante, que Málaga es la quinta área metropolitana de España, donde viven más de 1 millón de personas.", population: 569009)

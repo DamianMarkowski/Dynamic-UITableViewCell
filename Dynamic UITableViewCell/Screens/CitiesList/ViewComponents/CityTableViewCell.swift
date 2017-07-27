@@ -28,14 +28,14 @@ class CityTableViewCell: UITableViewCell {
         name.text = data.name
         population.text = "population: \(data.population)"
         cityDescription.text = data.shortDescription
-        let titleForButton = GlobalConstants.ShowMoreButtonTitle
+        let titleForButton = GlobalConstants.ButtonsTitles.ShowMoreButton
         showHideButton.setTitle(titleForButton, for: .normal)
     }
     
     @IBAction func showHideButtonClicked(_ sender: Any) {
         expanded = !expanded
         cityDescription.text = expanded ? data?.fullDescription : data?.shortDescription
-        let titleForButton = expanded ? GlobalConstants.HideButtonTitle : GlobalConstants.ShowMoreButtonTitle
+        let titleForButton = expanded ? GlobalConstants.ButtonsTitles.HideButton : GlobalConstants.ButtonsTitles.ShowMoreButton
         showHideButton.setTitle(titleForButton, for: .normal)
         self.delegate?.showHideButtonClicked(indexPath)
     }
